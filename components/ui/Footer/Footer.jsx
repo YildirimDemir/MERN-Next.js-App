@@ -26,7 +26,7 @@ export default function Footer() {
                 </li>
             </ul>
             <p className={`${Style["footer__copyright"]}`}>
-                2024 &copy; by Emircan ÇUBUKCU. All rights reserved.
+                2024 &copy; by Infinitix Software. All rights reserved.
             </p>
         </div>
     )
