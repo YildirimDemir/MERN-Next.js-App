@@ -1,0 +1,272 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e232b;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    position: relative;
+}
+
+.card-container {
+    max-width: 120rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 7rem;
+}
+
+.card {
+    border-radius: 30px;
+    overflow: hidden;
+    -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    background-color: rgb(58, 68, 83);
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    opacity: 100;
+    animation: fadeDown 1s ease;
+}
+
+.card__header {
+    position: relative;
+}
+
+.card__picture {
+    position: relative;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 83%, 0% 98%);
+    clip-path: polygon(0 0, 100% 0%, 100% 83%, 0% 98%);
+    width: 100%;
+    height: 22rem;
+    transition: ease 0.2s;
+}
+
+.card__picture:hover {
+    border: 15px solid rgb(110, 122, 141);
+    border-radius: 30px;
+    transform: translateZ(-3px);
+}
+
+.card__picture:active {
+    transform: translateZ(-1px);
+}
+
+
+.card__picture:focus {
+    border: 15px solid white;
+    border-radius: 30px;
+}
+
+.card__picture-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-gradient(linear,
+            left top,
+            right bottom,
+            from(#7dd56f),
+            to(#28b487));
+    background-image: linear-gradient(to right bottom, #3a4453, #fff);
+    opacity: 0.7;
+}
+
+.card__picture-img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.heading-tertirary {
+    font-size: 2.75rem;
+    text-align: right;
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
+    width: 70%;
+    z-index: 10;
+    color: #3a4453;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.heading-tertirary span {
+    padding: 1rem 1.5rem;
+    line-height: 1;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    background-image: -webkit-gradient(linear,
+            left top,
+            right bottom,
+            from(rgba(125, 213, 111, 0.85)),
+            to(rgba(40, 180, 135, 0.85)));
+    background-image: linear-gradient(to bottom right,
+            rgb(110, 122, 141),
+            rgba(255, 255, 255, 0.85));
+}
+
+.card__details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 1.75rem;
+    grid-column-gap: 2rem;
+    padding: 2.5rem 3rem;
+}
+
+.card__sub-heading {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    grid-column: 1 / -1;
+    color: white;
+}
+
+.card__text {
+    grid-column: 1 / -1;
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-top: -1rem;
+    margin-bottom: 0.75rem;
+    color: #aec2e2;
+}
+
+.card__data {
+    font-size: 1.3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #aec2e2;
+}
+
+.card__data svg {
+    margin-right: 0.7rem;
+}
+
+.card__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: #fff;
+}
+
+.card__footer {
+    background-color: #f7f7f7;
+    padding: 2.5rem 3rem;
+    border-top: 1px solid #f1f1f1;
+    font-size: 1.4rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    margin-top: auto;
+}
+
+.card__footer-value {
+    font-weight: 700;
+}
+
+.card__footer-text {
+    color: #999;
+}
+
+.card__ratings {
+    grid-row: 2 / 3;
+}
+
+.card .btn-small,
+.card .btn {
+    grid-row: 1 / 3;
+    justify-self: end;
+    -ms-flex-item-align: center;
+    align-self: center;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+    font-size: 1.6rem;
+    padding: 1.4rem 3rem;
+    border-radius: 10rem;
+    text-transform: uppercase;
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    font-weight: 400;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    /*Add later when we use this for the button in form*/
+    border: none;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.btn:hover {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.btn:active {
+    -webkit-transform: translateY(-1px);
+    transform: translateY(-1px);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.btn:focus {
+    outline: none;
+    background-color: #525d6d;
+}
+
+.btn--green {
+    background-color: #677488;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.btn--green::after {
+    background-color: #677488;
+}
+
+.ani {
+    opacity: 100;
+    animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 100;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fadeDown {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 100;
+        transform: translateY(0px);
+    }
+}

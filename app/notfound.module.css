@@ -1,0 +1,71 @@
+.main {
+    display: flex;
+    background-color: #f7f7f7;
+    padding: 8rem 6rem;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    position: relative;
+}
+
+.heading-secondary {
+    font-size: 10rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-image: -webkit-gradient(linear,
+            left top,
+            right top,
+            from(#7dd56f),
+            to(#28b487));
+    background-image: linear-gradient(to right, #7dd56f, #28b487);
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: 0.1rem;
+    line-height: 1.3;
+    display: inline-block;
+}
+
+.heading-secondary--notfound {
+    background-image: -webkit-gradient(linear,
+            left top,
+            right top,
+            from(#ff7730),
+            to(#eb4d4b));
+    background-image: linear-gradient(to right, #2e3c68, #44356d);
+    font-size: 10rem;
+}
+
+.notfound {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 80rem;
+    text-align: center;
+}
+
+.notfound__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.notfound__emoji {
+    font-size: 3.75rem;
+    margin-left: 1rem;
+}
+
+.notfound__msg {
+    font-size: 2.5rem;
+    font-weight: 700;
+    max-width: 50rem;
+    margin: 0 auto;
+}
